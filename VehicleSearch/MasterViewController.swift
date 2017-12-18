@@ -11,8 +11,8 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
   
   var detailViewController: DetailViewController? = nil
     
-  var candies = [Vehicle]()
-  var filteredCandies = [Vehicle]()
+  var vehicles = [Vehicle]()
+  var filteredVehicles = [Vehicle]()
     
   let searchController = UISearchController(searchResultsController: nil)
     
@@ -74,8 +74,8 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
             hasHeatedSeats: hasHeatedSeats
         )
         
-        self.candies.append(vehicle)
-        self.filteredCandies.append(vehicle)
+        self.vehicles.append(vehicle)
+        self.filteredVehicles.append(vehicle)
         
         self.tableView.reloadData()
     })
@@ -113,21 +113,21 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if isFiltering() {
-      searchFooter.setIsFilteringToShow(filteredItemCount: filteredCandies.count, of: candies.count)
-      return filteredCandies.count
+      searchFooter.setIsFilteringToShow(filteredItemCount: filteredVehicles.count, of: vehicles.count)
+      return filteredVehicles.count
     }
     
     searchFooter.setNotFiltering()
-    return candies.count
+    return vehicles.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! VehicleCell
     let vehicle: Vehicle
     if isFiltering() {
-      vehicle = filteredCandies[indexPath.row]
+      vehicle = filteredVehicles[indexPath.row]
     } else {
-      vehicle = candies[indexPath.row]
+      vehicle = vehicles[indexPath.row]
     }
     
     var options = [String]()
@@ -191,9 +191,9 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
       if let indexPath = tableView.indexPathForSelectedRow {
         let vehicle: Vehicle
         if isFiltering() {
-          vehicle = filteredCandies[indexPath.row]
+          vehicle = filteredVehicles[indexPath.row]
         } else {
-          vehicle = candies[indexPath.row]
+          vehicle = vehicles[indexPath.row]
         }
         let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
         controller.vehicleDetail = vehicle
@@ -207,7 +207,7 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
   
   func filterContentForSearchText(_ searchText: String, scope: String = "All") {
 
-    filteredCandies = candies.filter({( vehicle : Vehicle) -> Bool in
+    filteredVehicles = vehicles.filter({( vehicle : Vehicle) -> Bool in
       let doesCategoryMatch = (scope == "All") || (vehicle.color == scope)
       
       if searchBarIsEmpty() {
@@ -244,7 +244,7 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
         //TODO: pass filtered vehicles through chain of  individual filters
         
         if(instance.isAutomatic == true) {
-            filteredCandies = filteredCandies.filter({( vehicle : Vehicle) -> Bool in
+            filteredVehicles = filteredVehicles.filter({( vehicle : Vehicle) -> Bool in
                 let sort = (instance.isAutomatic == vehicle.isAutomatic)
                 
                 return sort
@@ -253,7 +253,7 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
         if(instance.hasSunroof == true) {
-            filteredCandies = filteredCandies.filter({( vehicle : Vehicle) -> Bool in
+            filteredVehicles = filteredVehicles.filter({( vehicle : Vehicle) -> Bool in
                 let sort = (instance.hasSunroof == vehicle.hasSunroof)
                 
                 return sort
@@ -262,7 +262,7 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
         if(instance.isFourWheelDrive == true) {
-            filteredCandies = filteredCandies.filter({( vehicle : Vehicle) -> Bool in
+            filteredVehicles = filteredVehicles.filter({( vehicle : Vehicle) -> Bool in
                 let sort = (instance.isFourWheelDrive == vehicle.isFourWheelDrive)
                 
                 return sort
@@ -271,7 +271,7 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
         if(instance.hasLowMiles == true) {
-            filteredCandies = filteredCandies.filter({( vehicle : Vehicle) -> Bool in
+            filteredVehicles = filteredVehicles.filter({( vehicle : Vehicle) -> Bool in
                 let sort = (instance.hasLowMiles == vehicle.hasLowMiles)
                 
                 return sort
@@ -280,7 +280,7 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
         if(instance.hasPowerWindows == true) {
-            filteredCandies = filteredCandies.filter({( vehicle : Vehicle) -> Bool in
+            filteredVehicles = filteredVehicles.filter({( vehicle : Vehicle) -> Bool in
                 let sort = (instance.hasPowerWindows == vehicle.hasPowerWindows)
                 
                 return sort
@@ -289,7 +289,7 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
         if(instance.hasNavigation == true) {
-            filteredCandies = filteredCandies.filter({( vehicle : Vehicle) -> Bool in
+            filteredVehicles = filteredVehicles.filter({( vehicle : Vehicle) -> Bool in
                 let sort = (instance.hasNavigation == vehicle.hasNavigation)
                 
                 return sort
@@ -298,7 +298,7 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
         if(instance.hasHeatedSeats == true) {
-            filteredCandies = filteredCandies.filter({( vehicle : Vehicle) -> Bool in
+            filteredVehicles = filteredVehicles.filter({( vehicle : Vehicle) -> Bool in
                 let sort = (instance.hasHeatedSeats == vehicle.hasHeatedSeats)
                 
                 return sort
@@ -321,8 +321,7 @@ func hasOptions() -> Bool {
     } else {
         return false
     }
-    
-    return true
+
 }
 
 extension MasterViewController: UISearchBarDelegate {
