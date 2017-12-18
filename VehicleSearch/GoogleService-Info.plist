@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>512612634167-e9b1vkvbd3ar377ql8ah8dneoqd4al00.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.512612634167-e9b1vkvbd3ar377ql8ah8dneoqd4al00</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDy_Pm0plDP5Z56T1lG7LP8E_NGEtqsQ2g</string>
+	<key>GCM_SENDER_ID</key>
+	<string>512612634167</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.gc.vehicle-search</string>
+	<key>PROJECT_ID</key>
+	<string>itrellis-dealership</string>
+	<key>STORAGE_BUCKET</key>
+	<string>itrellis-dealership.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:512612634167:ios:bb1b569a89458683</string>
+	<key>DATABASE_URL</key>
+	<string>https://itrellis-dealership.firebaseio.com</string>
+</dict>
+</plist>
