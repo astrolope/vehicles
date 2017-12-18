@@ -228,7 +228,7 @@ class MasterViewController: UIViewController, UITableViewDataSource, UITableView
   }
   
   func isFiltering() -> Bool {
-    let searchBarScopeIsFiltering = searchController.searchBar.selectedScopeButtonIndex != 0
+
     
     // TODO: Always filtering true
     //return searchController.isActive && (!searchBarIsEmpty() || searchBarScopeIsFiltering)

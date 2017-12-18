@@ -20,7 +20,7 @@
 		296FB88D1FE7770C00EF049D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 296FB88C1FE7770900EF049D /* GoogleService-Info.plist */; };
 		296FB88F1FE77DC400EF049D /* VehicleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296FB88E1FE77DC400EF049D /* VehicleCell.swift */; };
 		452C6F7B1E9BDA75003A4C50 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452C6F7A1E9BDA75003A4C50 /* SearchFooter.swift */; };
-		45D31C6D1EB28E2D000A3BE1 /* CandyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D31C6C1EB28E2D000A3BE1 /* CandyTheme.swift */; };
+		45D31C6D1EB28E2D000A3BE1 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D31C6C1EB28E2D000A3BE1 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,7 @@
 		296FB88C1FE7770900EF049D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		296FB88E1FE77DC400EF049D /* VehicleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleCell.swift; sourceTree = "<group>"; };
 		452C6F7A1E9BDA75003A4C50 /* SearchFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
-		45D31C6C1EB28E2D000A3BE1 /* CandyTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CandyTheme.swift; sourceTree = "<group>"; };
+		45D31C6C1EB28E2D000A3BE1 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		7DB50316F374B6DACA72F533 /* Pods-VehicleSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VehicleSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-VehicleSearch/Pods-VehicleSearch.release.xcconfig"; sourceTree = "<group>"; };
 		DF7A6FC1DC2418D43CE5AA37 /* Pods-VehicleSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VehicleSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VehicleSearch/Pods-VehicleSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				171E0C7D1B8E5B84001E6242 /* AppDelegate.swift */,
-				45D31C6C1EB28E2D000A3BE1 /* CandyTheme.swift */,
+				45D31C6C1EB28E2D000A3BE1 /* Theme.swift */,
 				171E0C7F1B8E5B84001E6242 /* MasterViewController.swift */,
 				296FB88E1FE77DC400EF049D /* VehicleCell.swift */,
 				452C6F7A1E9BDA75003A4C50 /* SearchFooter.swift */,
@@ -247,7 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				452C6F7B1E9BDA75003A4C50 /* SearchFooter.swift in Sources */,
-				45D31C6D1EB28E2D000A3BE1 /* CandyTheme.swift in Sources */,
+				45D31C6D1EB28E2D000A3BE1 /* Theme.swift in Sources */,
 				296FB88B1FE7666500EF049D /* FilterViewController.swift in Sources */,
 				171E0C821B8E5B84001E6242 /* DetailViewController.swift in Sources */,
 				171E0CAE1B8E5C58001E6242 /* Vehicle.swift in Sources */,
